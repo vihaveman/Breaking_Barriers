@@ -22,7 +22,7 @@ Burkina Faso,21.57982734
 Bangladesh,38.91744466
 Bulgaria,75.27144583
 Bahrain,100.0
-Bahamas,94.29380729
+Bahamas,92.4760204
 Bosnia and Herzegovina,75.67620138
 Belarus,86.89
 Belize,61.9941698
@@ -42,7 +42,7 @@ Chile,90.19336882
 China,73.05
 Cote d'Ivoire,45.42553268
 Cameroon,45.60217394
-Congo,22.90158489
+Congo,22.86494849
 Congo,8.65
 Colombia,73.02837449
 Comoros,27.33694319
@@ -66,7 +66,7 @@ East Asia & Pacific,72.2349866345909
 Europe & Central Asia (excluding high income),83.6089935495427
 Europe & Central Asia,86.4405939277618
 Ecuador,76.20289766
-Egypt,72.06
+Egypt,71.91420097
 Euro area,87.2925990045478
 Eritrea,21.73038628
 Spain,93.9
@@ -78,14 +78,14 @@ Finland,92.80806082
 Fiji,87.65996651
 France,86.09548575
 Faroe Islands,97.58195894
-Micronesia,40.40961941
+Micronesia,40.12946709
 Gabon,71.74940641
 United Kingdom,96.68023657
 Georgia,76.44271459
 Ghana,68.2
 Gibraltar,94.44447158
 Guinea,34.68012393
-Gambia,32.96228971
+Gambia,31.60419095
 Guinea-Bissau,35.15498736
 Equatorial Guinea,53.92240217
 Greece,78.49426371
@@ -95,7 +95,7 @@ Guatemala,50.84164945
 Guam,80.50546556
 Guyana,84.79357266
 High income,90.1016526051232
-Hong Kong SAR,93.09
+Hong Kong SAR,92.41313602
 Honduras,48.08351858
 Heavily indebted poor countries (HIPC),28.4885178014036
 Croatia,81.25396608
@@ -111,7 +111,7 @@ Isle of Man,
 India,46.31
 Not classified,
 Ireland,95.16956667
-Iran,78.6
+Iran,75.56986637
 Iraq,48.91718718
 Iceland,99.68701957
 Israel,90.3
@@ -125,13 +125,13 @@ Kyrgyz Republic,77.92035931
 Cambodia,60.1524023
 Kiribati,53.6270365
 St. Kitts and Nevis,79.47306769
-Korea,97.571327
+Korea,96.50505968
 Kuwait,99.7
 Latin America & Caribbean (excluding high income),75.5926608168041
 Lao PDR,62.0
 Lebanon,86.58903046
 Liberia,33.63315905
-Libya,
+Libya,17.76
 St. Lucia,78.09560329
 Latin America & Caribbean,76.1131619858358
 Least developed countries: UN classification,29.8007809391331
@@ -145,7 +145,7 @@ Late-demographic dividend,76.8879794531075
 Lithuania,86.93055802
 Luxembourg,98.66
 Latvia,91.17964988
-Macao SAR,88.46810492
+Macao SAR,88.33262029
 St. Martin (French part),
 Morocco,88.13031937
 Monaco,86.09548575
