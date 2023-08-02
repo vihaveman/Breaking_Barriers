@@ -44,9 +44,8 @@ d3.json('/geoJsonData').then(function (data) {
         feature.properties.TechCluster);
     }
   }).addTo(myMap);
-
-// Fetch the data from the endpoint
-fetch("/predictions")
+  // Fetch the data from the endpoint
+fetch("/predictions2024")
 .then(response => {
   if (!response.ok) {
     throw new Error("Network response was not ok.");
@@ -63,65 +62,76 @@ fetch("/predictions")
 .catch(error => {
   console.error("Error fetching data from /predictions endpoint:", error);
 });
-});
-
-//   populateSelectionCells("/predictions");
-// });
-// // Function to populate the country and year dropdowns
-// function populateSelectionCells(data) {
-//   const countrySelect = document.getElementById("countrySelect");
-//   const yearSelect = document.getElementById("yearSelect");
-
-//   // Extract unique countries and years from the data
-//   const countries = Array.from(new Set(data.map(item => item["Country Name"])));
-//   const years = Array.from(new Set(data.map(item => item["Year"])));
-
-//   // Populate the country dropdown
-//   countries.forEach(country => {
-//     const option = document.createElement("option");
-//     option.text = country;
-//     countrySelect.add(option);
-//   });
-
-//   // Populate the year dropdown
-//   years.forEach(year => {
-//     const option = document.createElement("option");
-//     option.text = year;
-//     yearSelect.add(option);
-//   });
-// }
-
-// // Function to fetch the prediction for the selected country and year
-// function fetchPrediction() {
-//   const selectedCountry = document.getElementById("countrySelect").value;
-//   const selectedYear = parseInt(document.getElementById("yearSelect").value);
-
-//   // Make a request to the "/predictions" endpoint with the selected country and year
-//   fetch("/predictions")
-//     .then(response => {
-//       if (!response.ok) {
-//         throw new Error("Network response was not ok.");
-//       }
-//       return response.json();
-//     })
-//     .then(data => {
-//       const prediction = data.find(
-//         item => item["Country Name"] === selectedCountry && item["Year"] === selectedYear
-//       );
-//       if (prediction) {
-//         // Display the prediction on the page (you can customize how you want to display it)
-//         alert(
-//           `Prediction for ${selectedCountry} in ${selectedYear}: ${prediction["Predicted_Poverty_Count"]}`
-//         );
-//       } else {
-//         alert("Prediction not available for the selected country and year.");
-//       }
-//     })
-//     .catch(error => {
-//       console.error("Error fetching prediction data:", error);
-//       alert("Error fetching prediction data. Please try again later.");
-//     });
-// }
-
-
-
+  // Fetch the data from the endpoint
+fetch("/predictions2025")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok.");
+    }
+    return response.json();
+  })
+  .then(data => {
+    if (data.length > 0) {
+      console.log("Data from /predictions endpoint:", data);
+    } else {
+      console.log("No data found in /predictions endpoint.");
+    }
+  })
+  .catch(error => {
+    console.error("Error fetching data from /predictions endpoint:", error);
+  });
+    // Fetch the data from the endpoint
+fetch("/predictions2026")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok.");
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data.length > 0) {
+        console.log("Data from /predictions endpoint:", data);
+      } else {
+        console.log("No data found in /predictions endpoint.");
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching data from /predictions endpoint:", error);
+    });
+    // Fetch the data from the endpoint
+    fetch("/predictions2027")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok.");
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data.length > 0) {
+        console.log("Data from /predictions endpoint:", data);
+      } else {
+        console.log("No data found in /predictions endpoint.");
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching data from /predictions endpoint:", error);
+    });
+    // Fetch the data from the endpoint
+fetch("/predictions2028")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok.");
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data.length > 0) {
+        console.log("Data from /predictions endpoint:", data);
+      } else {
+        console.log("No data found in /predictions endpoint.");
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching data from /predictions endpoint:", error);
+    });
+    });

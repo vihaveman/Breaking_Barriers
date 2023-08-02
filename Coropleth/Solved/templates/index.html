@@ -42,7 +42,7 @@
   <!-- The div where we'll insert our map -->
   <div id="map"></div>
 
-  <!-- Container for selecting country and year -->
+  <!-- Container for selecting country -->
   <div id="selectContainer">
     <label for="countrySelect">Select Country:</label>
     <select id="countrySelect" required>
@@ -51,14 +51,7 @@
       <!-- Options for countries will be dynamically populated -->
     </select>
 
-    <label for="yearSelect">Select Year:</label>
-    <select id="yearSelect" required>
-      <!-- Placeholder text for year selection -->
-      <option value="" disabled selected>Select Year</option>
-      <!-- Options for years will be dynamically populated -->
-    </select>
-
-    <button type="button" onclick="fetchPrediction()">Get Prediction</button>
+    <button type="button" id="getPredictionButton">Get Prediction</button>
   </div>
 
   <!-- Our JavaScript -->
@@ -66,3 +59,73 @@
 </body>
 
 </html>
+
+<!-- <!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Clusters based on Countries Poverty Count and Technological Advancement</title>
+
+  Leaflet JavaScript code
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"></script>
+
+  D3 library
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  Leaflet CSS
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css">
+
+  Our CSS
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+  <style>
+    /* Your CSS styles here */
+
+    /* Container for select elements */
+    #selectContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style for select elements */
+    label {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  The div where we'll insert our map
+  <div id="map"></div>
+
+  Container for selecting country and year
+  <div id="selectContainer">
+    <label for="countrySelect">Select Country:</label>
+    <select id="countrySelect" required>
+      Placeholder text for country selection
+      <option value="" disabled selected>Select Country</option>
+      Options for countries will be dynamically populated
+    </select>
+
+    <label for="yearSelect">Select Year:</label>
+    <select id="yearSelect" required>
+      Placeholder text for year selection
+      <option value="" disabled selected>Select Year</option>
+      Options for years will be dynamically populated
+    </select>
+
+    <button type="button" id="getPredictionButton">Get Prediction</button>
+  </div>
+
+  Our JavaScript
+  <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
+ -->
