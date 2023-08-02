@@ -126,6 +126,26 @@ def get_predictions_data_2028():
     dataset = list(collection.find(query, projection))
     return jsonify(dataset)
 
+@app.route("/countries")
+def get_countries_list():
+    collection = db['predictions']
+
+    # Fetch all documents from the 'predictions' collection
+    dataset = list(collection.find({}))
+
+    # Create an empty set to store unique country names
+    unique_countries = set()
+
+    # Extract the country names from each document and add to the set
+    for data in dataset:
+        country = data.get('Country Name')  # Assuming the country name is stored under the 'Country Name' key
+        if country:
+            unique_countries.add(country)
+
+    # Convert the set to a list and return it
+    return jsonify(list(unique_countries))
+
+
 # Endpoint to retrieve the entire prediction dataset
 @app.route("/worldbank")
 def get_wbdata_data():

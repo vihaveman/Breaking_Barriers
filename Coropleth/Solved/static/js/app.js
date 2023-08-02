@@ -44,26 +44,10 @@ d3.json('/geoJsonData').then(function (data) {
         feature.properties.TechCluster);
     }
   }).addTo(myMap);
-  // Fetch the data from the endpoint
-fetch("/predictions2024")
-.then(response => {
-  if (!response.ok) {
-    throw new Error("Network response was not ok.");
-  }
-  return response.json();
-})
-.then(data => {
-  if (data.length > 0) {
-    console.log("Data from /predictions endpoint:", data);
-  } else {
-    console.log("No data found in /predictions endpoint.");
-  }
-})
-.catch(error => {
-  console.error("Error fetching data from /predictions endpoint:", error);
 });
-  // Fetch the data from the endpoint
-fetch("/predictions2025")
+
+// Fetch the data from the endpoint
+fetch("/predictions2024")
   .then(response => {
     if (!response.ok) {
       throw new Error("Network response was not ok.");
@@ -73,6 +57,16 @@ fetch("/predictions2025")
   .then(data => {
     if (data.length > 0) {
       console.log("Data from /predictions endpoint:", data);
+      const countrySelect = document.getElementById("countrySelect");
+      
+      // Assuming the "data" is an array of objects with a "Country" property containing the country name.
+      data.forEach(item => {
+        const country = item.Country;
+        const option = document.createElement("option");
+        option.text = country;
+        option.value = country;
+        countrySelect.appendChild(option);
+      });
     } else {
       console.log("No data found in /predictions endpoint.");
     }
@@ -80,58 +74,3 @@ fetch("/predictions2025")
   .catch(error => {
     console.error("Error fetching data from /predictions endpoint:", error);
   });
-    // Fetch the data from the endpoint
-fetch("/predictions2026")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok.");
-      }
-      return response.json();
-    })
-    .then(data => {
-      if (data.length > 0) {
-        console.log("Data from /predictions endpoint:", data);
-      } else {
-        console.log("No data found in /predictions endpoint.");
-      }
-    })
-    .catch(error => {
-      console.error("Error fetching data from /predictions endpoint:", error);
-    });
-    // Fetch the data from the endpoint
-    fetch("/predictions2027")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok.");
-      }
-      return response.json();
-    })
-    .then(data => {
-      if (data.length > 0) {
-        console.log("Data from /predictions endpoint:", data);
-      } else {
-        console.log("No data found in /predictions endpoint.");
-      }
-    })
-    .catch(error => {
-      console.error("Error fetching data from /predictions endpoint:", error);
-    });
-    // Fetch the data from the endpoint
-fetch("/predictions2028")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok.");
-      }
-      return response.json();
-    })
-    .then(data => {
-      if (data.length > 0) {
-        console.log("Data from /predictions endpoint:", data);
-      } else {
-        console.log("No data found in /predictions endpoint.");
-      }
-    })
-    .catch(error => {
-      console.error("Error fetching data from /predictions endpoint:", error);
-    });
-    });
