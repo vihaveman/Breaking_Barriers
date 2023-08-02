@@ -56,12 +56,14 @@ fetch("/predictions2024")
   })
   .then(data => {
     if (data.length > 0) {
-      console.log("Data from /predictions endpoint:", data);
-      const countrySelect = document.getElementById("countrySelect");
+       console.log("Data from /predictions endpoint:", data);
+      const countrySelect = document.getElementById("countrySelect");   
       
       // Assuming the "data" is an array of objects with a "Country" property containing the country name.
-      data.forEach(item => {
+      data.forEach((item) => { console.log(item.Country)
+
         const country = item.Country;
+
         const option = document.createElement("option");
         option.text = country;
         option.value = country;
@@ -74,3 +76,4 @@ fetch("/predictions2024")
   .catch(error => {
     console.error("Error fetching data from /predictions endpoint:", error);
   });
+
