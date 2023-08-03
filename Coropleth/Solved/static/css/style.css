@@ -1,14 +1,31 @@
+/* Your CSS styles here */
+
 body {
   padding: 0;
   margin: 0;
+  display: flex;
 }
 
 #map,
-body,
 html {
-  height: 100%;
+  flex: 1;
+  height: 100vh;
 }
 
+#map {
+  order: 2;
+}
+
+#selectContainer {
+  flex: 0 0 300px;
+  padding: 20px;
+  order: 1;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Rest of the CSS remains the same */
 .leaflet-popup-content {
   text-align: center;
 }
@@ -20,8 +37,8 @@ html {
   font: 12px Arial, Helvetica, sans-serif;
   font-weight: bold;
   background: white;
-  background: rgba(255,255,255,0.8);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 .legend ul {
@@ -46,3 +63,4 @@ html {
 h1 {
   text-align: center;
 }
+
