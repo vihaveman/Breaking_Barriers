@@ -58,22 +58,50 @@ fetch("/predictions2024")
     if (data.length > 0) {
        console.log("Data from /predictions endpoint:", data);
       const countrySelect = document.getElementById("countrySelect");   
-      
       // Assuming the "data" is an array of objects with a "Country" property containing the country name.
       data.forEach((item) => { console.log(item.Country)
-
         const country = item.Country;
-
         const option = document.createElement("option");
         option.text = country;
         option.value = country;
         countrySelect.appendChild(option);
       });
+      // Add event listener to the "countrySelect" dropdown
+      countrySelect.addEventListener("change", () => {
+        const selectedCountry = countrySelect.value;
+        // Find the corresponding item in the data array based on the selected country
+        const selectedCountryData = data.find(item => item.Country === selectedCountry);
+        if (selectedCountryData && selectedCountryData.Predicted_Poverty_Count !== null) {
+          // Assuming the "Predicted_Poverty_Count" is a property of the data item representing the predicted poverty count.
+          const predictedPovertyCount = selectedCountryData.Predicted_Poverty_Count;
+          // Update the container with the predicted poverty count
+          predictedPovertyContainer.textContent = `Predicted Poverty Count for ${selectedCountry}: ${predictedPovertyCount}`;
+        } else {
+          // If selected country data is not found or the predicted poverty count is null, display an error message
+          predictedPovertyContainer.textContent = "No prediction available for the selected country.";
+        }
+      });
     } else {
-      console.log("No data found in /predictions endpoint.");
+      console.log("No data found in /predictions2024 endpoint.");
     }
   })
   .catch(error => {
-    console.error("Error fetching data from /predictions endpoint:", error);
+    console.error("Error fetching data from /predictions2024 endpoint:", error);
   });
 
+    //   } else {
+  //     console.log("No data found in /predictions endpoint.");
+  //   }
+  // })
+  // .catch(error => {
+  //   console.error("Error fetching data from /predictions endpoint:", error);
+  // });
+      // Add event listener to the "Get Prediction" button
+
+
+
+
+
+
+
+      

@@ -24,6 +24,25 @@ html {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+/* Your existing CSS styles */
+
+/* CSS for the "Get Prediction" button */
+#getPredictionButton {
+  margin-bottom: 10px; /* Add margin at the bottom of the button */
+}
+
+/* CSS for the predictedPovertyContainer */
+#predictedPovertyContainer {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 
 /* Rest of the CSS remains the same */
 .leaflet-popup-content {

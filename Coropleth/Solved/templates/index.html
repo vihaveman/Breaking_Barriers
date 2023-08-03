@@ -42,20 +42,24 @@
   <!-- The div where we'll insert our map -->
   <div id="map"></div>
 
-  <!-- Container for selecting country -->
-  <div id="selectContainer">
-    <label for="countrySelect">Select Country:</label>
-    <select id="countrySelect" required>
-      <!-- Placeholder text for country selection -->
-      <option value="" disabled selected>Select Country</option>
-      <!-- Options for countries will be dynamically populated -->
-    </select>
+<!-- Container for selecting country -->
+<div id="selectContainer">
+  <label for="countrySelect">Select Country:</label>
+  <select id="countrySelect" required>
+    <!-- Placeholder text for country selection -->
+    <option value="" disabled selected>Select Country</option>
+    <!-- Options for countries will be dynamically populated -->
+  </select>
+  <!-- Container for displaying predicted poverty count -->
 
-    <button type="button" id="getPredictionButton">Get Prediction</button>
-  </div>
+  <div id="predictedPovertyContainer"></div>
 
-  <!-- Our JavaScript -->
+
+  
+</div>
+
   <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+
 </body>
 
 </html>
